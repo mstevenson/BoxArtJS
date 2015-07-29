@@ -1,3 +1,71 @@
+
+// var loadBox = function ( boxDirectory ) {
+// 	var path = 'boxes/' + boxDirectory + "/";
+// 	var boxDefinition = path + "box.json";
+// };
+
+
+// BOX
+
+
+var ContainerType = Object.freeze( {
+	unknown: 1,
+	topFoldBox: 2,
+	frontFlapBox: 3,
+	lidBox: 4,
+	boxSleeve: 5,
+	squareJewelCase: 6,
+	squareJewelCaseDouble: 7,
+	discSleeveOpenTop: 8,
+	discSleeveFlap: 9,
+	dvdCase: 10,
+	dvdCaseSlim: 11,
+	dvdCaseDouble: 12,
+	floppy5Sleeve: 13,
+	floppy3Sleeve: 14,
+	cassetteCase: 15,
+})
+
+var MediaType = Object.freeze( {
+	none: 0,
+	cd: 1,
+	dvd: 2,
+	cassette: 3,
+})
+
+function Container(supportedChildTypes) {
+	// The types of objects that can be placed inside of the container
+	this.supportedChildTypes = supportedChildTypes;
+
+	// Can things be put inside of this container?
+	this.isContainer = true;
+
+	// add something to the box, such as a disk, manual, or another box
+	this.insert = function(artifact) {
+		if (artifact.isContainer) {
+
+		}
+	}
+
+	this.open = function() {
+
+	}
+
+	this.close = function() {
+
+	}
+}
+
+function TopFoldBox() {
+	Container.call(this, [JewelCase]);
+}
+
+function JewelCase() {
+
+}
+
+
+
 // scene
 
 var scene = new THREE.Scene();
@@ -33,7 +101,7 @@ var materials = [
 
 	// front
 	new THREE.MeshPhongMaterial( {
-		map: THREE.ImageUtils.loadTexture( 'textures/myst.jpg' ),
+		map: THREE.ImageUtils.loadTexture( 'boxes/myst/myst.jpg' ),
 		color: 0xffffff,
 		specular: 0x666666,
 		shininess: 30
@@ -41,7 +109,7 @@ var materials = [
 
 	// back
 	new THREE.MeshPhongMaterial( {
-		map: THREE.ImageUtils.loadTexture( 'textures/myst-back.jpg' ),
+		map: THREE.ImageUtils.loadTexture( 'boxes/myst/myst-back.jpg' ),
 		color: 0xffffff,
 		specular: 0x666666,
 		shininess: 30

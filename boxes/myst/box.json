@@ -1,0 +1,30 @@
+{
+	"name": "Myst",
+	"format": "Macintosh",
+	"type": "standard",
+	"size": {
+		"width": 15,
+		"height": 20,
+		"depth": 5,
+	},
+	"faces": {
+		"front": {
+			"image": ""
+		},
+		"back": {
+			"image": ""
+		},
+		"left": {
+			"image": ""
+		},
+		"right": {
+			"image": ""
+		},
+		"top": {
+			"image": ""
+		},
+		"bottom": {
+			"image": ""
+		},
+	}
+}
